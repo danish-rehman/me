@@ -1,1 +1,179 @@
-Hello World
+<html>
+<head>
+<style>
+  body {font-family:'Bitstream Vera Sans Mono','Courier', monospace;
+    /*background-image: url('./img/mine.jpg');*/ margin:0; padding:0;}
+  .popup:hover { font-weight: bold; }
+  #eve {
+    left: 16%;
+    top:12%;
+    cursor: pointer;
+  }
+  #sea {
+    left: 17%;
+    top: 29%;
+    cursor: pointer;
+  }
+  #blog {
+    left: 23%;
+    top: 46%;
+    cursor: pointer;
+  }
+  #travel {
+    left: 25%;
+    top: 63%;
+    cursor: pointer;
+  }
+  .popup {
+    position: absolute;
+    margin: 0 auto;
+    top: 22%;
+    border-radius: 5px;
+    background: white;
+    height: 31px;
+    z-index: 1000;
+    padding: 31px;
+    /* display: none; */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    border-radius: 10px;
+    border: 1px solid black;
+    font-size: 21px;
+  }
+  #bg {
+    background: url("./img/mine.jpg") 100% no-repeat;
+    color: darkgray;
+    font-size: 8px;
+    height: 561px;
+    background-position: 0 0;
+    width: 963px;
+    margin: auto;
+    clear: both;
+  }
+  #heading {
+    margin: auto;
+    width: 891px;
+    font-size: 44px;
+  }
+  #name {
+    float: left;
+  }
+  #city {
+    float: right;
+    font-size: 22px;
+  }
+</style>
+</head>
+<body>
+  <div id="heading">
+    <div id="name">Danish Rehman</div>
+    <div id="city">Los Angeles, CA<br/>drehman@usc.edu</div>
+  </div>
+  <div id="bg">
+    <!--
+    The Linux kernel is a Unix-like operating system kernel used by a
+    variety of operating systems based on it, which are usually in the form
+    of Linux distributions.The Linux kernel is a prominent example of free
+    and open source software.
+    The Linux kernel is released under the GNU General Public License
+    version (plus some firmware images with various non-free licenses), and
+    is developed by contributors worldwide. Day-to-day development
+    discussions take place on the Linux kernel mailing list.
+    The Linux kernel was initially conceived and created in 1991 by Finnish
+    computer science student Linus Torvalds. Linux rapidly accumulated
+    developers and users who adapted code from other free software projects
+    for use with the new operating system. The Linux kernel has received
+    contributions from thousands of programmers
+
+
+    In April 1991, Linus Torvalds, a 21-year-old student at the University
+    of Helsinki, Finland started working on some simple ideas for an
+    operating system. He started with a task switcher in Intel 80386
+    assembly language and a terminal driver. On 25 August 1991, Torvalds
+    posted the following to comp.os.minix, a newsgroup on Usenet:
+
+    I'm doing a (free) operating system (just a hobby, won't be big and
+    professional like gnu) for 386(486) AT clones. This has been brewing
+    since April, and is starting to get ready. I'd like any feedback on
+    things people like/dislike in minix, as my OS resembles it somewhat
+    (same physical layout of the file-system (due to practical reasons)
+    among other things).
+
+    I've currently ported bash(1.08) and gcc(1.40), and things seem to
+    work. This implies that I'll get something practical within a few
+    months [...] Yes - it's free of any minix code, and it has a
+    multi-threaded fs. It is NOT portable (uses 386 task switching etc),
+    and it probably never will support anything other than AT-harddisks, as
+    that's all I have.
+
+    [...] It's mostly in C, but most people wouldn't call what I write C.
+    It uses every conceivable feature of the 386 I could find, as it was
+    also a project to teach me about the 386. As already mentioned, it uses
+    a MMU, for both paging (not to disk yet) and segmentation. It's the
+    segmentation that makes it REALLY 386 dependent (every task has a 64Mb
+    segment for code  data - max 64 tasks in 4Gb. Anybody who needs more
+    than 64Mb/task - tough cookies). [...] Some of my "C"-files
+    (specifically mm.c) are almost as much assembler as C. [...] Unlike
+    minix, I also happen to LIKE interrupts, so interrupts are handled
+    without trying to hide the reason behind them.[13]
+
+    After that, many people contributed code to the project. Early on, the
+    MINIX community contributed code and ideas to the Linux kernel. At the
+    time, the GNU Project had created many of the components required for a
+    free operating system, but its own kernel, GNU Hurd, was incomplete and
+    unavailable. The BSD operating system had not yet freed itself from
+    legal encumbrances. Despite the limited functionality of the early
+    versions, Linux rapidly accumulated developers and users.
+    By September 1991, Linux version 0.01 was released on the FTP server
+    (ftp.funet.fi) of the Finnish University and Research Network (FUNET).
+    It had 10,239 lines of code. In October 1991, Linux version 0.02 was
+    released.[14]
+
+    In December 1991, Linux 0.11 was released. This version was the first
+    to be self-hosted - Linux 0.11 could be compiled by a computer running
+    Linux 0.11. When he released version 0.12 in February 1992, Torvalds
+    adopted the GNU General Public License (GPL) over his previous
+    self-drafted license, which had not permitted commercial
+    redistribution.[15]
+
+    A newsgroup known as alt.os.linux was started, and on 19 January 1992,
+    the first post to alt.os.linux was made.[16] On 31 March 1992,
+    alt.os.linux became comp.os.linux.[17]
+
+    The X Window System was soon ported to Linux. In March 1992, Linux
+    version 0.95 was the first to be capable of running X. This large
+    version number jump (from 0.1x to 0.9x) was due to a feeling that a
+    version 1.0 with no major missing pieces was imminent. However, this
+    proved to be somewhat overoptimistic, and from 1993 to early 1994, 15
+    development versions of version 0.99 appeared.
+
+    On 14 March 1994, Linux 1.0.0 was released, with 176,250 lines of code.
+    In March 1995, Linux 1.2.0 was released (310,950 lines of code).
+    The fact that Linux is a monolithic kernel rather than a microkernel
+    was the topic of a debate between Andrew S. Tanenbaum, the creator of
+    MINIX, and Linus Torvalds.[22] The debate, started in 1992 on the
+    Usenet discussion group comp.os.minix, was about Linux and kernel
+    architecture in general.[23] Tanenbaum argued that microkernels are
+    superior to monolithic kernels and that therefore Linux is obsolete.
+    Unlike traditional monolithic kernels, device drivers in Linux are
+    easily configured as loadable kernel modules and are loaded or unloaded
+    while running the system. This subject was revisited on 9 May 2006,[24]
+    and on 12 May 2006 Tanenbaum wrote a position statement.[25]
+    -->
+  </div>
+
+<div class="popup" id="eve" onclick="window.location ='v1.html';">
+  <div class="text">C/Py Programmer Portfolio</div>
+</div>
+<div class="popup" id="sea" onclick="window.location ='v2.html';">
+  <div class="text">Web Developer Portfolio</div>
+</div>
+<div class="popup" id="blog" onclick="window.location ='blog.html';">
+  <div class="text">Tech blog</div>
+</div>
+<div class="popup" id="travel" onclick="window.location ='travel.html';">
+  <div class="text">Travel</div>
+</div>
+
+
+</body>
+</html>
