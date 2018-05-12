@@ -1,250 +1,299 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Zen master</title>
-  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
-  <!--<style>
-    ul, li { list-style-type: none; }
-    h1, h2, h3, p, div { padding:0; margin: 0; }
-    p { width: 812px; }
-    span.inside { display: block; }
-    .codes { background-color: #eeeeee; padding: 5px; }
-    #header { width: 812px; }
-    #header img { float: right; }
-    #app { float: left; }
-    #cv a { display: block; line-height: 25px; }
-    #cv { width: 812px; }
-    #cv div { float: right; }
-    body {font-family: "Droid Serif", "Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,sans-serif;color: #222222;text-rendering: optimizeLegibility; padding-left:100px; }
-    a {color: #e65454;text-decoration: none;line-height: inherit;}
-    .num {float: left; width: 30px; color: #c6c6c6;}
-    .proj { }
-    .lang { margin-left: 30px; }
-    .desc { margin-left: 30px; }
-  </style>-->
-</head>
-<body>
-  
-  <h1 id="header">Danish Rehman<img src="./img/usc_email.jpg" />
-  </h1>
-  <span>Los Angeles, CA - USA</span><br/>
-  <span><a href="https://github.com/dan-boa" target="_blank">github@dan-boa</a></span><br/>
-  <span><a href="Danish_Rehman_Resume.pdf" target="_blank">click for resume</a></span>
-  <!--<span>(213) 447-8367</span><br/>-->
-  <br/>
-  <br/>
-  <h2><b>Currently looking for Spring Internship 2015</b></h2>
-  <br/>
-  <p>
-    I am graduate student of
-    <a href="http://en.wikipedia.org/wiki/USC_Viterbi_School_of_Engineering" target="_blank">Viterbi School of Engineering</a>,
-    USC - Los Angeles in Computer Science.
-    My area of interest is <a>Computer Networks</a> and <a>HTTP</a>.
-    I love challenging work and is an active participant of <a>Hackathons</a>.
-    I am very passionate about programming in C and Python and wants to build application which <a>solve daily problems</a> and make me feel like Enginner.
-  </p>
-  <br/>
-  <br/>
+    <head>
+        <title>bibiboot</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="./favicon.png" type="image/x-icon">
 
-  <h2>What am i doing currently</h2>
-  <br/>
-  <p>I am enrolled as a graduate student at Viterbi School Of Engineering, USC</p>
-    <span class="inside">--- CS402 &nbsp;&nbsp;Operating Systems</span>
-    <span class="inside">--- EE450 &nbsp;&nbsp;Computer Networks</span>
-    <span class="inside">--- CS558L Internetworking and Distributed Systems Laboratory</span>
-    <span class="inside">--- EE503 &nbsp;&nbsp;Probability For Engineers</span>
-    <span class="inside">--- CS570 &nbsp;&nbsp;Algorithms</span>
-  <br/>
-  <br/>
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+        <style type="text/css">
+            #main {
+                margin: 0 auto;
+                width: 700px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="main">
+            <div class="jumbotron">
+                <h1 class="display-4">Danish Rehman</h1>
+                <p class="lead">San Francisco, CA</p>
+                <hr class="my-4">
+                    <p>Software Engineer at Criteo</p>
+                    <p>A programmer who likes to write in Python, React and Redux ecosystem. Also DevOps on the side.</p>
+                    <p class="lead">
+                        <a class="btn btn-primary btn-lg" href="Danish_Rehman_Resume.pdf" role="button">resume</a>
+                    </p>
+            </div>
 
-  <h2>Projects</h2>
-  </br>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Atlas: Data rollup storage platform</h5>
+                    <p class="card-text">Designed and developed Atlas. Atlas is a high-throughput data rollup storage platform for CISION. It is suited to store time-based data (even time-series) and exposes a HTTP REST API to make it suitable in any language. Data is fed into the queue which is in turn read by the workers and rolled up subsequently and saved into the Cassandra.</p>
+                    <a href="#" class="btn btn-primary">Nodejs</a>
+                    <a href="#" class="btn btn-primary">RabbitMQ</a>
+                    <a href="#" class="btn btn-primary">Cassandra</a>
+                </div>
+            </div>
 
-  <span class="num">1</span>
-  <h3 class="proj">Fast and Reliable File Transfer Protocol using TCP
-  </h3>
-  <p class="lang">Technology: <a>C, Kernel Programming, TCP/IP</a></p>
-  </br>
-  <p class="desc">
-  Hacked the Network Component of Linux Kernel Module  and removed
+            <p></p>
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Bulk user mapping post</h5>
+                    <p class="card-text">
+                    Created an in-memory lock-free data-structure to bulk post on data-store. Reduced the load on data store by 500\%
+                    </p>
+                    <a href="#" class="btn btn-primary">C</a>
+                    <a href="#" class="btn btn-primary">Libevent</a>
+                    <a href="#" class="btn btn-primary">Ruby</a>
+                </div>
+            </div>
+
+            <p></p>
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Cookie matching pixel server</h5>
+                    <p class="card-text">
+                    Wrote from scratch a cookie matching server. Handling 60K QPS traffic.
+                    </p>
+                    <a href="#" class="btn btn-primary">C</a>
+                    <a href="#" class="btn btn-primary">Libevent</a>
+                    <a href="#" class="btn btn-primary">Ruby</a>
+                </div>
+            </div>
+
+            <p></p>
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Rate limiting module</h5>
+                    <p class="card-text">
+                    A plug and play rate limiting module using token bucket algorithm. Able to rate-limit per partner per thread. Currently rate-limiting at 10K QPS.
+                    </p>
+                    <a href="#" class="btn btn-primary">C</a>
+                    <a href="#" class="btn btn-primary">Libevent</a>
+                </div>
+            </div>
+
+            <p></p>
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Rate limiting module</h5>
+                    <p class="card-text">
+                    A plug and play rate limiting module using token bucket algorithm. Able to rate-limit per partner per thread. Currently rate-limiting at 10K QPS.
+                    </p>
+                    <a href="#" class="btn btn-primary">C</a>
+                    <a href="#" class="btn btn-primary">Libevent</a>
+                </div>
+            </div>
+
+            <p></p>
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Imageboard</h5>
+                    <p class="card-text">
+                    I am running it as a side project since January 2016. Currently it receives 1.6 Million page views per month. I wrote it from scratch including the moderation tool. Currently working on moving from Flux to Redux.
+                    </p>
+                    <a href="#" class="btn btn-primary">Python</a>
+                    <a href="#" class="btn btn-primary">React</a>
+                    <a href="#" class="btn btn-primary">Flux</a>
+                    <a href="#" class="btn btn-primary">Redux</a>
+                    <a href="#" class="btn btn-primary">MySQL</a>
+                    <a href="#" class="btn btn-primary">Flask</a>
+                    <a href="#" class="btn btn-primary">Nginx</a>
+                    <a href="#" class="btn btn-primary">S3</a>
+                </div>
+            </div>
+
+            <p></p>
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Memcached adaptive expiry algorithm</h5>
+                    <p class="card-text">
+                     Implemented an algorithm to derive expiry time of cached data. Have filed patent for it. It increased the hit rate from 28% to 58%.
+                    </p>
+                    <a href="#" class="btn btn-primary">Python</a>
+                    <a href="#" class="btn btn-primary">Memcached</a>
+                    <a href="#" class="btn btn-primary">MySQL</a>
+                </div>
+            </div>
+
+            <p></p>
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">MongoDb based critical logs monitoring</h5>
+                    <p class="card-text">
+                    Built to broadcast realtime alerts which resolved 80% critical logs within the first hour.
+                    </p>
+                    <a href="#" class="btn btn-primary">Python</a>
+                    <a href="#" class="btn btn-primary">MongoDb</a>
+                    <a href="#" class="btn btn-primary">MySQL</a>
+                </div>
+            </div>
+
+            <p></p>
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Recommendation engine using Redis</h5>
+                    <p class="card-text">
+                     Sorted set of redis was used for international search result. Increased the sale of international flights by 8%
+                    </p>
+                    <a href="#" class="btn btn-primary">Python</a>
+                    <a href="#" class="btn btn-primary">Redis</a>
+                </div>
+            </div>
+
+            <p></p>
+
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Log Dumping and Historical-Realtime analytics architecture</h5>
+                    <p class="card-text">
+                     Map reduce jobs over MongoDb. Creating architecture for filling MongoDb collection and summarising them using map reduce and storing in MySQL.
+                    </p>
+                    <a href="#" class="btn btn-primary">Hadoop</a>
+                    <a href="#" class="btn btn-primary">MongoDb</a>
+                    <a href="#" class="btn btn-primary">Python</a>
+                </div>
+            </div>
+
+            <p></p>
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Fast and Reliable File Transfer Protocol using TCP</h5>
+                    <p class="card-text">
+                     Hacked the Network Component of Linux Kernel Module  and removed
   exponential backoff from TCP Reno and altered the mechanism for
   controlling the congestion window size . We achieved a throughput of 10Mbs in a 100mbps link with RTT of 200ms
   and Loss rate of 20% using TCP.
-  </p>
-  <br/>
+                    </p>
+                    <a href="#" class="btn btn-primary">C</a>
+                    <a href="#" class="btn btn-primary">Kernel Programming</a>
+                    <a href="#" class="btn btn-primary">CP/IP</a>
+                </div>
+            </div>
 
-  <span class="num">2</span>
-  <h3 class="proj">Fast and Reliable File Transfer Protocol using UDP
-    <a href="https://github.com/dan-boa/uftp"
-    target="_blank">git@dan-boa/uftp</a>
-</h3>
-  <p class="lang">Technology: <a>C, UDP</a></p>
-  </br>
-  <p class="desc">
-  Implemented a Fast and Reliable File Transfer Protocol on top of UDP. Using the Protocol we transferred a 1Gb file reliably in a high latency
-  and lossy link.
-  </p>
-  <br/>
+            <p></p>
 
-  <span class="num">3</span>
-  <h3 class="proj">Custom Network Protocol
-    <a href="https://github.com/dan-boa/cnrouter"
-    target="_blank">git@dan-boa/cnrouter</a>
-  </h3>
-  <p class="lang">Technology: <a>C, UDP</a></p>
-  </br>
-  <p class="desc">
-  Developed a Custom Network Protocol like TCP/UDP but reliable and
-  faster.The protocol has custom packet header , and custom payload size. The protocol supports 10000s of nodes. We tested our custom File Transfer Protocol to transfer a 10MB file
-  between nodes.
-  </p>
-  <br/>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">
+Fast and Reliable File Transfer Protocol using UDP</h5>
+                    <p class="card-text">
+                     Implemented a Fast and Reliable File Transfer Protocol on top of UDP. Using the Protocol we transferred a 1Gb file reliably in a high latency and lossy link.
+                    </p>
+                    <a href="#" class="btn btn-primary">C</a>
+                    <a href="#" class="btn btn-primary">UDP</a>
+                </div>
+            </div>
 
-  <span class="num">4</span>
-  <h3 class="proj">Custom Router in User Space
-    <a href="https://github.com/dan-boa/crouter"
-    target="_blank">git@dan-boa/crouter</a>
-  </h3>
-  <p class="lang">Technology: <a>C, UDP</a></p>
-  </br>
-  <p class="desc">
-  In this project we built an IP router in user space.The router supported packet forwarding , dynamic routing and correct
-  response for various ICMP messages. For Dynamic Routing we implemented a RIP daemon , which would enable the custom router to accept routing packets from the other routers, in our case it is Quagga router and send routing packets to the other routers.
-  </p>
-  <br/>
+            <p></p>
 
- <span class="num">5</span>
-  <h3 class="proj">Custom Network Time Protocol(CNTP)
-    <a href="https://github.com/dan-boa/cntp"
-    target="_blank">git@dan-boa/cntp</a>,
-    <a href="https://github.com/dan-boa/drtt"
-    target="_blank">git@dan-boa/drtt</a>
-    <a href="https://github.com/dan-boa/ntp_router"
-    target="_blank">git@dan-boa/ntp_router</a>
-  </h3>
-  <p class="lang">Technology: <a>C, UDP</a></p>
-  </br>
-  <p class="desc">
-  Developed a Custom Network Time Protocol(CNTP) in C
-  which enable synchronization of time between nodes
-  over a network. We follow a client-server model in
-  which Server broadcasts its time and the Clients sync
-  their time with that of Server. CNTP offers improvement
-  over NTP(Network Time Protocol)v4 by calculating end-to-end
-  delay for the links between the nodes rather than assuming
-  that outgoing and incoming paths between the nodes are symmetric.
-  Timestamping of packets is done at the Kernel Driver level.
-  </p>
-  <br/>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Custom Network Protocol</h5>
+                    <p class="card-text">
+                     Developed a Custom Network Protocol like TCP/UDP but reliable and faster.The protocol has custom packet header , and custom payload size. The protocol supports 10000s of nodes. We tested our custom File Transfer Protocol to transfer a 10MB file between nodes.
+                    </p>
+                    <a href="#" class="btn btn-primary">C</a>
+                    <a href="#" class="btn btn-primary">UDP</a>
+                </div>
+            </div>
 
-  <span class="num">6</span>
-  <h3 class="proj">Scaling Real time bidding architecture</h3>
-  <p class="lang">Technology: <a>C, Libevent, Ruby</a></p>
-  </br>
-  <p class="desc">
-  Creating a distributed auctioning process in case of real time bidding system
-  thereby reducing the network io.
-  </p>
-  <br/>
-  <br/>
+            <p></p>
 
-  <span class="num">7</span>
-  <h3 class="proj">Co-Founder of MotherUSC <a href="http://www.motherusc.com" targer="_blank">@motherusc.com</a></h3>
-  <p class="lang">Technology: <a>Python, Redis, C, MySQL, Memcached</a></p>
-  </br>
-  <p class="desc">Search Engine for USC facebook groups.
-     Amazingly fast and hacky search engine for USC students.Currently live and used by USC students.
-     Top 2 in HackSC ( USC Hackathon ) for the given application. Funded by Innovation Institute, USC.</p>
-  <br/>
-  <br/>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">
+Custom Router in User Space</h5>
+                    <p class="card-text">
+In this project we built an IP router in user space.The router supported packet forwarding , dynamic routing and correct response for various ICMP messages. For Dynamic Routing we implemented a RIP daemon , which would enable the custom router to accept routing packets from the other routers, in our case it is Quagga router and send routing packets to the other routers.
+                    </p>
+                    <a href="#" class="btn btn-primary">C</a>
+                    <a href="#" class="btn btn-primary">UDP</a>
+                </div>
+            </div>
 
-  <span class="num">8</span>
-  <h3>Implemeneted Weenix Processes and Threads</h3>
-  <p class="lang">Technology: <a>C, Kernel</a></p>
-  </br>
-  <p class="desc">
-  Threads, processes, scheduler and
-synchronization primitives (mutex). Developed functions to create and kill threads and processes, switching
-scheduler among others.
-  </p>
-  <br/>
-  <br/>
+            <p></p>
 
-  <span class="num">9</span>
-  <h3>Implemeneted Virtual File System</h3>
-  <p class="lang">Technology: <a>C, Kernel</a></p>
-  </br>
-  <p class="desc">
-  VFS provides a common interface between the operating system
-kernel and the various file systems. Developed functions for implementing the pathname to vnode
-conversion, file opening/reading and VFS system calls.
-  </p>
-  <br/>
-  <br/>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">
+Custom Network Time Protocol</h5>
+                    <p class="card-text">
+Developed a Custom Network Time Protocol(CNTP) in C which enable synchronization of time between nodes over a network. We follow a client-server model in which Server broadcasts its time and the Clients sync their time with that of Server. CNTP offers improvement over NTP(Network Time Protocol)v4 by calculating end-to-end delay for the links between the nodes rather than assuming that outgoing and incoming paths between the nodes are symmetric. Timestamping of packets is done at the Kernel Driver level.
+                    </p>
+                    <a href="#" class="btn btn-primary">C</a>
+                    <a href="#" class="btn btn-primary">UDP</a>
+                </div>
+            </div>
+
+            <p></p>
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Scaling Real time bidding architecture</h5>
+                    <p class="card-text">
+                        Creating a distributed auctioning process in case of real time bidding system thereby reducing the network io.
+                    </p>
+                    <a href="#" class="btn btn-primary">C</a>
+                    <a href="#" class="btn btn-primary">Libevent</a>
+                </div>
+            </div>
+
+            <p></p>
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">
+Implemeneted Weenix Processes and Threads</h5>
+                    <p class="card-text">
+                        Threads, processes, scheduler and synchronization primitives (mutex). Developed functions to create and kill threads and processes, switching scheduler among others.
+                    </p>
+                    <a href="#" class="btn btn-primary">C</a>
+                    <a href="#" class="btn btn-primary">Kernel</a>
+                </div>
+            </div>
+
+            <p></p>
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <p class="card-text">
+                    </p>
+                    <a href="#" class="btn btn-primary"></a>
+                    <a href="#" class="btn btn-primary"></a>
+                </div>
+            </div>
+
+            <p></p>
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <p class="card-text">
+                    </p>
+                    <a href="#" class="btn btn-primary"></a>
+                    <a href="#" class="btn btn-primary"></a>
+                </div>
+            </div>
+
+            <p></p>
 
 
-  <span class="num">10</span>
-  <h3>Detection and Prevention of Dos and DDos Attack</h3>
-  <p class="lang">Technology: <a>C, Apache, DOS, DDOS</a></p>
-  </br>
-  <p class="desc">
-  Developed a pluggable
-module for apache web server to detect and prevent Dos and DDos attack based on blacklisting of IP
-algorithm.
-  </p>
-  <br/>
-  <br/>
+ 
 
-  <span class="num">11</span>
-  <h3>Memcache expiry time algorithm</h3>
-  <p class="lang">Technology: <a>Python, Redis, Memcached</a></p>
-  <p class="desc">Calculation of expiry time of data set in memcache using an adaptive algorithm (In the process of filling patent over it)</p>
-  </br>
-  <p class="desc">Created an adaptive algorithm which calculates expiry time of each data based on its certain parameters. The alorithm was effective in increasing the hit percentage from 33 to 55 of a live travel website where nature of data is very non-uniform.</p>
-  <p>
-  <br/>
-  <br/>
-
-  <span class="num">12</span>
-  <h3>Wiki - timeline <a href="https://github.com/dan-boa/wiki-timeline" target="_blank">git@dan-boa/wiki-timeline</a></h3>
-  <p class="lang">Technology: <a>Python, Wikipedia, Redis</a></p>
-  <p class="desc">Transforming a wikipedia content of a personality into a location - timeline based data series.</p>
-  <br/>
-  <p class="desc">
-    Location and time based mapping of personalities helps in determining following things.
-    A location at a certain period in history was inhabited by which world renowned person.
-    A period of stay of person at a particular location.
-    Who has been the most nomadic world renowned personality.
-    Who has been to a very few places.
-    Who has been visiting the same place again and again throughout his life.
-  </p>
-  <br/>
-  <br/>
-
-  <span class="num">13</span>
-  <h3>Prophetic-mongo
-      <a href="https://github.com/dan-boa/prophetic-mongo" target="_blank">git@dan-boa/prophetic-mongo</a></h3>
-  <p class="lang">Technology: <a>MongoDB, Python</a></p>
-  <p class="desc">Critical logs monitoring system based on mongoDb.</p>
-  <br/>
-  <p class="desc">
-    A critical log monitoring tool which reads live data from mongodb. Given the architecture of log dumping is such that it is logged in to a collection. The reading file operates on the log based on a heirarchy and convention set for logging. Generate periodic summary as well as real time alert signals which can be converted to emailer or web pages.
-  </p>
-  <br/>
-  <br/>
-
-  <span class="num">14</span>
-  <h3>CacheMonitor <a href="https://github.com/dan-boa/CacheMonitor" target="_blank">git@dan-boa/CacheMonitor</a></h3>
-  <p class="lang">Technology: <a>Python-curses, Memcached</a></p>
-  <p class="desc">Lightweight memcache monitoring tool written on python curses.</p>
-  <br/>
-  <p class="desc">
-    Memcache monitoring tool written on python-curses. Providing proper format and refresh rate for all the stats commands which can be run on memcache. Also provide slab wise analysis.
-  </p>
-  <br/>
-  <p class="codes">Rest of my work is available at github</p>
-  <br/>
-  <br/>
-
+</div>
 </body>
 </html>
