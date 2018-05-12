@@ -11,33 +11,64 @@
             #main {
                 margin: 0 auto;
                 width: 700px;
+            },
+            .alexa {
+                width: 100px;
+                display: 'inline-block'
             }
         </style>
     </head>
     <body>
         <div id="main">
-            <div class="jumbotron">
+            <div class="">
                 <h1 class="display-4">Danish Rehman</h1>
                 <p class="lead">San Francisco, CA</p>
                 <hr class="my-4">
                     <p>Software Engineer at Criteo</p>
-                    <p>A programmer who likes to write in Python, React and Redux ecosystem. Also DevOps on the side.</p>
+                    <p>A programmer who likes to write in Python, React and Redux ecosystem. Also DevOps on the side. Feel free to contact me if you any questions or propositions. My contact email is in the resume and yes i am willing to relocate.</p>
                     <p class="lead">
                         <a class="btn btn-primary btn-lg" href="Danish_Rehman_Resume.pdf" role="button">resume</a>
                     </p>
+                    <br/><br/>
             </div>
+
+
+
+<div class="alert alert-primary" role="alert">
+  <H2>Projects</H2>
+</div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Migrate Ad server from AWS to CRITEO maintained DC</h5>
+                    <p class="card-text">
+Saved CRITEO $1 million a year by bringing a recently acquired Company infrastructure in-house.
+                    </p>
+                    <a class="alert alert-warning" role="alert">C#</a>
+                    <a class="alert alert-warning" role="alert">Python</a>
+                    <a class="alert alert-warning" role="alert">ReactJS</a>
+                    <a class="alert alert-warning" role="alert">HAProxy</a>
+                    <a class="alert alert-warning" role="alert">Prometheus</a>
+                </div>
+            </div>
+
+            <p></p>
+            
 
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Atlas: Data rollup storage platform</h5>
                     <p class="card-text">Designed and developed Atlas. Atlas is a high-throughput data rollup storage platform for CISION. It is suited to store time-based data (even time-series) and exposes a HTTP REST API to make it suitable in any language. Data is fed into the queue which is in turn read by the workers and rolled up subsequently and saved into the Cassandra.</p>
-                    <a href="#" class="btn btn-primary">Nodejs</a>
-                    <a href="#" class="btn btn-primary">RabbitMQ</a>
-                    <a href="#" class="btn btn-primary">Cassandra</a>
+                    <a class="alert alert-warning" role="alert">Nodejs</a>
+                    <a class="alert alert-warning" role="alert">RabbitMQ</a>
+                    <a class="alert alert-warning" role="alert">Cassandra</a>
+                    <a class="alert alert-warning" role="alert">Remote</a>
                 </div>
             </div>
 
             <p></p>
+
+
 
             <div class="card">
                 <div class="card-body">
@@ -45,9 +76,29 @@
                     <p class="card-text">
                     Created an in-memory lock-free data-structure to bulk post on data-store. Reduced the load on data store by 500\%
                     </p>
-                    <a href="#" class="btn btn-primary">C</a>
-                    <a href="#" class="btn btn-primary">Libevent</a>
-                    <a href="#" class="btn btn-primary">Ruby</a>
+                    <a class="alert alert-warning" role="alert">C</a>
+                    <a class="alert alert-warning" role="alert">Libevent</a>
+                    <a class="alert alert-warning" role="alert">Ruby</a>
+                </div>
+            </div>
+
+            <p></p>
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Imageboard</h5>
+                    <p class="card-text">
+                    A side project since January 2016. Currently it receives 3 Million page views per month (April 2018). Written from scratch including the moderation tool.
+                    </p>
+                    <img style="width: 100%" src='./alexa.png' />
+                    <p></p>
+                    <a class="alert alert-warning" role="alert">Python</a>
+                    <a class="alert alert-warning" role="alert">React</a>
+                    <a class="alert alert-warning" role="alert">Redux</a>
+                    <a class="alert alert-warning" role="alert">MySQL</a>
+                    <a class="alert alert-warning" role="alert">Flask</a>
+                    <a class="alert alert-warning" role="alert">Nginx</a>
+                    <a class="alert alert-warning" role="alert">S3</a>
                 </div>
             </div>
 
@@ -59,9 +110,9 @@
                     <p class="card-text">
                     Wrote from scratch a cookie matching server. Handling 60K QPS traffic.
                     </p>
-                    <a href="#" class="btn btn-primary">C</a>
-                    <a href="#" class="btn btn-primary">Libevent</a>
-                    <a href="#" class="btn btn-primary">Ruby</a>
+                    <a class="alert alert-warning" role="alert">C</a>
+                    <a class="alert alert-warning" role="alert">Libevent</a>
+                    <a class="alert alert-warning" role="alert">Ruby</a>
                 </div>
             </div>
 
@@ -73,40 +124,8 @@
                     <p class="card-text">
                     A plug and play rate limiting module using token bucket algorithm. Able to rate-limit per partner per thread. Currently rate-limiting at 10K QPS.
                     </p>
-                    <a href="#" class="btn btn-primary">C</a>
-                    <a href="#" class="btn btn-primary">Libevent</a>
-                </div>
-            </div>
-
-            <p></p>
-
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Rate limiting module</h5>
-                    <p class="card-text">
-                    A plug and play rate limiting module using token bucket algorithm. Able to rate-limit per partner per thread. Currently rate-limiting at 10K QPS.
-                    </p>
-                    <a href="#" class="btn btn-primary">C</a>
-                    <a href="#" class="btn btn-primary">Libevent</a>
-                </div>
-            </div>
-
-            <p></p>
-
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Imageboard</h5>
-                    <p class="card-text">
-                    I am running it as a side project since January 2016. Currently it receives 1.6 Million page views per month. I wrote it from scratch including the moderation tool. Currently working on moving from Flux to Redux.
-                    </p>
-                    <a href="#" class="btn btn-primary">Python</a>
-                    <a href="#" class="btn btn-primary">React</a>
-                    <a href="#" class="btn btn-primary">Flux</a>
-                    <a href="#" class="btn btn-primary">Redux</a>
-                    <a href="#" class="btn btn-primary">MySQL</a>
-                    <a href="#" class="btn btn-primary">Flask</a>
-                    <a href="#" class="btn btn-primary">Nginx</a>
-                    <a href="#" class="btn btn-primary">S3</a>
+                    <a class="alert alert-warning" role="alert">C</a>
+                    <a class="alert alert-warning" role="alert">Libevent</a>
                 </div>
             </div>
 
@@ -118,9 +137,9 @@
                     <p class="card-text">
                      Implemented an algorithm to derive expiry time of cached data. Have filed patent for it. It increased the hit rate from 28% to 58%.
                     </p>
-                    <a href="#" class="btn btn-primary">Python</a>
-                    <a href="#" class="btn btn-primary">Memcached</a>
-                    <a href="#" class="btn btn-primary">MySQL</a>
+                    <a class="alert alert-warning" role="alert">Python</a>
+                    <a class="alert alert-warning" role="alert">Memcached</a>
+                    <a class="alert alert-warning" role="alert">MySQL</a>
                 </div>
             </div>
 
@@ -132,9 +151,9 @@
                     <p class="card-text">
                     Built to broadcast realtime alerts which resolved 80% critical logs within the first hour.
                     </p>
-                    <a href="#" class="btn btn-primary">Python</a>
-                    <a href="#" class="btn btn-primary">MongoDb</a>
-                    <a href="#" class="btn btn-primary">MySQL</a>
+                    <a class="alert alert-warning" role="alert">Python</a>
+                    <a class="alert alert-warning" role="alert">MongoDb</a>
+                    <a class="alert alert-warning" role="alert">MySQL</a>
                 </div>
             </div>
 
@@ -146,8 +165,8 @@
                     <p class="card-text">
                      Sorted set of redis was used for international search result. Increased the sale of international flights by 8%
                     </p>
-                    <a href="#" class="btn btn-primary">Python</a>
-                    <a href="#" class="btn btn-primary">Redis</a>
+                    <a class="alert alert-warning" role="alert">Python</a>
+                    <a class="alert alert-warning" role="alert">Redis</a>
                 </div>
             </div>
 
@@ -160,9 +179,9 @@
                     <p class="card-text">
                      Map reduce jobs over MongoDb. Creating architecture for filling MongoDb collection and summarising them using map reduce and storing in MySQL.
                     </p>
-                    <a href="#" class="btn btn-primary">Hadoop</a>
-                    <a href="#" class="btn btn-primary">MongoDb</a>
-                    <a href="#" class="btn btn-primary">Python</a>
+                    <a class="alert alert-warning" role="alert">Hadoop</a>
+                    <a class="alert alert-warning" role="alert">MongoDb</a>
+                    <a class="alert alert-warning" role="alert">Python</a>
                 </div>
             </div>
 
@@ -177,9 +196,9 @@
   controlling the congestion window size . We achieved a throughput of 10Mbs in a 100mbps link with RTT of 200ms
   and Loss rate of 20% using TCP.
                     </p>
-                    <a href="#" class="btn btn-primary">C</a>
-                    <a href="#" class="btn btn-primary">Kernel Programming</a>
-                    <a href="#" class="btn btn-primary">CP/IP</a>
+                    <a class="alert alert-warning" role="alert">C</a>
+                    <a class="alert alert-warning" role="alert">Kernel Programming</a>
+                    <a class="alert alert-warning" role="alert">CP/IP</a>
                 </div>
             </div>
 
@@ -192,8 +211,8 @@ Fast and Reliable File Transfer Protocol using UDP</h5>
                     <p class="card-text">
                      Implemented a Fast and Reliable File Transfer Protocol on top of UDP. Using the Protocol we transferred a 1Gb file reliably in a high latency and lossy link.
                     </p>
-                    <a href="#" class="btn btn-primary">C</a>
-                    <a href="#" class="btn btn-primary">UDP</a>
+                    <a class="alert alert-warning" role="alert">C</a>
+                    <a class="alert alert-warning" role="alert">UDP</a>
                 </div>
             </div>
 
@@ -205,8 +224,8 @@ Fast and Reliable File Transfer Protocol using UDP</h5>
                     <p class="card-text">
                      Developed a Custom Network Protocol like TCP/UDP but reliable and faster.The protocol has custom packet header , and custom payload size. The protocol supports 10000s of nodes. We tested our custom File Transfer Protocol to transfer a 10MB file between nodes.
                     </p>
-                    <a href="#" class="btn btn-primary">C</a>
-                    <a href="#" class="btn btn-primary">UDP</a>
+                    <a class="alert alert-warning" role="alert">C</a>
+                    <a class="alert alert-warning" role="alert">UDP</a>
                 </div>
             </div>
 
@@ -219,8 +238,8 @@ Custom Router in User Space</h5>
                     <p class="card-text">
 In this project we built an IP router in user space.The router supported packet forwarding , dynamic routing and correct response for various ICMP messages. For Dynamic Routing we implemented a RIP daemon , which would enable the custom router to accept routing packets from the other routers, in our case it is Quagga router and send routing packets to the other routers.
                     </p>
-                    <a href="#" class="btn btn-primary">C</a>
-                    <a href="#" class="btn btn-primary">UDP</a>
+                    <a class="alert alert-warning" role="alert">C</a>
+                    <a class="alert alert-warning" role="alert">UDP</a>
                 </div>
             </div>
 
@@ -233,8 +252,8 @@ Custom Network Time Protocol</h5>
                     <p class="card-text">
 Developed a Custom Network Time Protocol(CNTP) in C which enable synchronization of time between nodes over a network. We follow a client-server model in which Server broadcasts its time and the Clients sync their time with that of Server. CNTP offers improvement over NTP(Network Time Protocol)v4 by calculating end-to-end delay for the links between the nodes rather than assuming that outgoing and incoming paths between the nodes are symmetric. Timestamping of packets is done at the Kernel Driver level.
                     </p>
-                    <a href="#" class="btn btn-primary">C</a>
-                    <a href="#" class="btn btn-primary">UDP</a>
+                    <a class="alert alert-warning" role="alert">C</a>
+                    <a class="alert alert-warning" role="alert">UDP</a>
                 </div>
             </div>
 
@@ -246,8 +265,8 @@ Developed a Custom Network Time Protocol(CNTP) in C which enable synchronization
                     <p class="card-text">
                         Creating a distributed auctioning process in case of real time bidding system thereby reducing the network io.
                     </p>
-                    <a href="#" class="btn btn-primary">C</a>
-                    <a href="#" class="btn btn-primary">Libevent</a>
+                    <a class="alert alert-warning" role="alert">C</a>
+                    <a class="alert alert-warning" role="alert">Libevent</a>
                 </div>
             </div>
 
@@ -260,8 +279,8 @@ Implemeneted Weenix Processes and Threads</h5>
                     <p class="card-text">
                         Threads, processes, scheduler and synchronization primitives (mutex). Developed functions to create and kill threads and processes, switching scheduler among others.
                     </p>
-                    <a href="#" class="btn btn-primary">C</a>
-                    <a href="#" class="btn btn-primary">Kernel</a>
+                    <a class="alert alert-warning" role="alert">C</a>
+                    <a class="alert alert-warning" role="alert">Kernel</a>
                 </div>
             </div>
 
@@ -269,11 +288,12 @@ Implemeneted Weenix Processes and Threads</h5>
 
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title"></h5>
+                    <h5 class="card-title">Implemeneted Virtual File System</h5>
                     <p class="card-text">
+VFS provides a common interface between the operating system kernel and the various file systems. Developed functions for implementing the pathname to vnode conversion, file opening/reading and VFS system calls.
                     </p>
-                    <a href="#" class="btn btn-primary"></a>
-                    <a href="#" class="btn btn-primary"></a>
+                    <a class="alert alert-warning" role="alert">C</a>
+                    <a class="alert alert-warning" role="alert">Kernel</a>
                 </div>
             </div>
 
@@ -281,18 +301,33 @@ Implemeneted Weenix Processes and Threads</h5>
 
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title"></h5>
+                    <h5 class="card-title">
+Detection and Prevention of Dos and DDos Attack</h5>
                     <p class="card-text">
+Developed a pluggable module for apache web server to detect and prevent Dos and DDos attack based on blacklisting of IP algorithm.
                     </p>
-                    <a href="#" class="btn btn-primary"></a>
-                    <a href="#" class="btn btn-primary"></a>
+                    <a class="alert alert-warning" role="alert">C</a>
+                    <a class="alert alert-warning" role="alert">Apache</a>
                 </div>
             </div>
 
             <p></p>
 
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">
+Memcache expiry time algorithm</h5>
+                    <p class="card-text">
+Calculation of expiry time of data set in memcache using an adaptive algorithm (In the process of filling patent over it)
 
- 
+
+Created an adaptive algorithm which calculates expiry time of each data based on its certain parameters. The alorithm was effective in increasing the hit percentage from 33 to 55 of a live travel website where nature of data is very non-uniform.
+                    </p>
+                    <a class="alert alert-warning" role="alert">Python</a>
+                    <a class="alert alert-warning" role="alert">Redis</a>
+                    <a class="alert alert-warning" role="alert">Memcached</a>
+                </div>
+            </div>
 
 </div>
 </body>
