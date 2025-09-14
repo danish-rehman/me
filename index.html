@@ -1,83 +1,116 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Danish Rehman — Personal Site</title>
+    <meta name="description" content="A minimal, readable personal site and blog." />
+    <style>
+      :root{
+        --fg: #111;
+        --muted: #555;
+        --bg: #fff;
+        --link: #0645ad;
+        --border: #e6e6e6;
+        --maxw: 760px;
+        --rhythm: 1.1rem;
+        --arrow: #bbb;
+      }
+      html{font-size: 18px;}
+      body{
+        margin:0; color:var(--fg); background:var(--bg);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+                     Ubuntu, Cantarell, "Helvetica Neue", Arial, "Apple Color Emoji",
+                     "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+        line-height: 1.55;
+      }
+      a{ color: var(--link); text-decoration: underline; text-underline-offset: .15em; }
+      a:hover{ text-decoration-thickness: 2px; }
+      .site-header{ border-bottom: 1px solid var(--border); background: #fafafa; }
+      .wrap{ max-width: var(--maxw); margin: 0 auto; padding: calc(var(--rhythm) * 1.2) var(--rhythm); }
+      .brand{ display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+      .brand h1{ font-size: 2.4rem; margin:0; font-weight: 400; }
+      nav ul{ list-style:none; margin:0; padding:0; display:flex; gap:1rem; flex-wrap:wrap; }
+      nav a{ text-decoration:none; color:inherit; }
+      nav a:hover{ text-decoration: underline; }
+      main section{ padding-block: calc(var(--rhythm) * 1.6); }
+      h2{ font-size: 1.35rem; margin: 0 0 .5rem 0; }
+      p{ margin: .4rem 0 .8rem; }
+      .muted{ color: var(--muted); }
+      hr{ border:0; border-top:1px solid var(--border); margin: calc(var(--rhythm) * 2) 0; }
+      .link-list{ list-style: none; padding: 0; margin: .6rem 0; }
+      .link-list li{ margin: .35rem 0; }
+      .link-list li::before{ content:"→ "; color:var(--arrow); font-weight:300; }
+      .link-list time{ color: var(--muted); margin-right:.5rem; white-space:nowrap; }
+      .portfolio-img{
+        float:right;
+        max-width:180px;
+        margin:0 0 1rem 1rem;
+        border-radius:50%;
+      }
+      footer{ border-top: 1px solid var(--border); color: var(--muted); padding:var(--rhythm); }
+      .legal{ display:flex; gap:.5rem; align-items:center; flex-wrap:wrap; }
+      .legal img{ height:18px; width:auto; opacity:.8; }
+      @media (max-width: 720px){
+        .portfolio-img{ float:none; display:block; margin:1rem auto; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap brand">
+        <h1><a href="/">Danish Rehman</a>        <img src="https://cdn.prod.website-files.com/662ae63d0306bdfd5a66b3af/67f566e880a19af69dc27c37_bio-image.jpg" alt="Danish Rehman portfolio photo" class="portfolio-img" />
 
-<head>
-    <meta charset="utf-8">
-    <title>
-        &lt;danish&gt;
-    </title>
-    <meta content="index" name="robots">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://antirez.com/css/style.css?v=14" rel="stylesheet" type="text/css">
-    <link href="/images/favicon.png" rel="shortcut icon">
-    <link href="/rss" rel="alternate" type="application/rss+xml">
-    <link href="http://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
-    <script src="/js/jquery.1.6.4.min.js"></script>
-    <script src="/js/app.js?v=10"></script>
-</head>
+        </h1>
+        <nav aria-label="Primary">
+          <ul>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#talks">Talk</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-<body>
-    <div id="container">
-        <header>
-            <h1><a href="/">&lt;&lt;danish&gt;&gt;</a></h1>
-            <nav></nav>
-            <nav id="account"></nav>
-        </header>
-        <div id="content">
-            <section id="newslist">
-                <article data-news-id="144">
-                    <h2><a href="/news/144">About me</a></h2>
-                    <address></address><small><a href="#down" class="downarrow disabled">&#9660;</a></small>
-                    <topcomment>
-                        <article class="comment" style="margin-left:0px" data-comment-id="144-" id="144-"><span
-                                class="info"><span class="username"><a href="/user/danish">danish</a></span> 22 days
-                                ago. </span>
-                            <pre>Hi, I'm Danish Rehman, a staff software engineer with 12+ years of experience working for Attentive based in San Francisco, California. I spend most of my professional time writing code, technical leadership, mentorship and improving processes.
+    <main id="content" class="wrap">
+      <section aria-labelledby="hello">
+        <h2 id="hello">Hello!</h2>
+        <p>I'm <strong>Danish Rehman</strong>. Briefly about myself:</p>
+        <ul class="link-list">
+          <li>I work on distributed systems at <a href="https://www.attentive.com/">Attentive</a>, shaping the architecture and scalability of the product as a Staff Software Engineer and helping build the AI-powered messaging product.</li>
+          <li>I have 15 years of experience and enjoy mentoring engineers around me.</li>
+          <li>My background spans Ad-Tech and SaaS, including roles at <a href="https://www.criteo.com/">Criteo</a> and <a href="https://www.yahoo.com/">Yahoo</a>, where I contributed as a founding engineer driving core initiatives.</li>
+          <li>I enjoy speaking about distributed systems. I have spoken at <a href="https://datastreaming-summit.org/">Data Streaming Summit</a>, <a href="https://www.p99conf.io/">P99 Conf</a>, and <a href="https://heapcon.io/2025">Heapcon Conf</a>.</li>
+          <li>I love baking breads and pizzas; tending a vibrant garden of oranges 🍊, berries 🍓🫐, passion fruit and guavas; and spending active time biking and swimming with my son.</li>
+        </ul>
+      </section>
 
-My email address is: rehman dot d dot fazlur at gmail dot com 
+      <section aria-labelledby="contact">
+        <h2 id="contact">About me / Contacts</h2>
+        <p class="muted">I am best described by the identity spread across the internet.</p>
+        <ul class="link-list">
+          <li><a href="Danish_Rehman_Resume.pdf">My Resume</a></li>
+          <li><a href="https://www.linkedin.com/in/danfazalr/">My LinkedIn profile</a></li>
+          <li><a href="https://github.com/danish-rehman">My projects on Github</a></li>
+        </ul>
+        <p>Email: rehman dot d dot fazlur at gmail dot com.</p>
+      </section>
 
-<a href="Danish_Rehman_Resume.pdf" style="color: blue;">link to my resume</a>
-                            </pre>
-                        </article>
-                    </topcomment>
-                </article>
+      <section aria-labelledby="talks">
+        <h2 id="talks">Conference talks</h2>
+        <p class="muted">Events where I will be speaking or have spoken:</p>
+        <ul class="link-list">
+          <li><time datetime="2025-07-01">July 2025:</time><a href="#">Data Streaming Summit</a></li>
+          <li><time datetime="2025-09-01">Sept 2025:</time><a href="#">P99 Conference</a></li>
+          <li><time datetime="2025-10-01">Oct 2025:</time><a href="#">Heapcon Conference</a></li>
+        </ul>
+      </section>
+    </main>
 
-
-                <article data-news-id="144">
-                    <h2><a href="/news/144">Social channels</a></h2>
-                    <address></address><small><a href="#down" class="downarrow disabled">&#9660;</a></small>
-                    <topcomment>
-                        <article class="comment" style="margin-left:0px" data-comment-id="144-" id="144-"><span
-                                class="info"><span class="username"><a href="/user/danish" >danish</a></span> 22 days
-                                ago. </span>
-                            <pre>I am active on github: <a href='https://github.com/danish-rehman' style="color: blue;">@danish-rehman</a>
-                            </pre>
-                        </article>
-
-                    
-                    </topcomment>
-                </article>
-
-                <article data-news-id="144">
-                    <h2><a href="/news/144">Personal interests</a></h2>
-                    <address></address><small><a href="#down" class="downarrow disabled">&#9660;</a></small>
-                    <topcomment>
-                        <article class="comment" style="margin-left:0px" data-comment-id="144-" id="144-"><span
-                                class="info"><span class="username"><a href="/user/danish">danish</a></span> 22 days
-                                ago. </span>
-                            <pre>Baking and learning about breads and pizza.
-Growing and taking care of my oranges, blueberry, blackberry, red-currant, passion-fruit, strawberry and guavas.
-Biking / Swimming with my son. TESTING
-                            </pre>
-                        </article>
-
-                    </topcomment>
-                </article>
-              
-            </section>
-        </div>
-        <footer><a href="https://github.com/danish-rehman">github</a> | <a href="Danish_Rehman_Resume.pdf">resume</a></footer>
-    </div>
-</body>
-
+    <footer>
+      <div class="wrap legal">
+        <img alt="Creative Commons" src="https://licensebuttons.net/l/by/3.0/88x31.png" />
+        <small>Unless otherwise specified, all content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.</small>
+      </div>
+    </footer>
+  </body>
 </html>
