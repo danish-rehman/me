@@ -54,6 +54,31 @@
       @media (max-width: 720px){
         .portfolio-img{ float:none; display:block; margin:1rem auto; }
       }
+
+      .talks-table {
+  display: grid;
+  grid-template-columns: 110px 1fr 2fr 90px;
+  row-gap: .6rem;
+  font-size: .9rem;
+}
+
+.talks-header {
+  font-weight: 600;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: .4rem;
+}
+
+.talks-row div {
+  padding-right: .8rem;
+}
+
+.talks-row a {
+  text-decoration: underline;
+}
+
+.talks-row a:hover {
+  text-decoration-thickness: 2px;
+}
     </style>
   </head>
   <body>
@@ -75,13 +100,23 @@
       <section aria-labelledby="hello">
         <h2 id="hello">Hello!</h2>
         <p>I'm <strong>Danish Rehman</strong>. Briefly about myself:</p>
-        <ul class="link-list">
-          <li>I work on distributed systems at <a href="https://www.attentive.com/">Attentive</a>, shaping the architecture and scalability of the product as a Staff Software Engineer and helping build the AI-powered messaging product.</li>
-          <li>I have 15 years of experience and enjoy mentoring engineers around me.</li>
-          <li>My background spans Ad-Tech and SaaS, including roles at <a href="https://www.criteo.com/">Criteo</a> and <a href="https://www.yahoo.com/">Yahoo</a>, where I contributed as a founding engineer driving core initiatives.</li>
-          <li>I enjoy speaking about distributed systems. I have spoken at <a href="https://datastreaming-summit.org/">Data Streaming Summit</a>, <a href="https://www.p99conf.io/">P99 Conf</a>, and <a href="https://heapcon.io/2025">Heapcon Conf</a>.</li>
-          <li>I love baking breads and pizzas; tending a vibrant garden of oranges 🍊, berries 🍓🫐, passion fruit and guavas; and spending active time biking and swimming with my son.</li>
-        </ul>
+        <p>
+          I'm Danish Rehman, a Staff Software Engineer at <a href="https://www.attentive.com/">Attentive</a>, where I design and scale distributed systems and 
+          lead the architecture behind our AI-powered messaging platform. 
+          I have 15 years of experience building high-throughput, fault-tolerant systems across AdTech and SaaS, 
+          with prior roles at <a href="https://www.criteo.com/">Criteo</a>, <a href="https://www.yahoo.com/">Yahoo</a>, and <a href="https://www.aspire.io/">Aspire</a>, including multiple 0→1 product journeys and platforms operating 
+          at 100K+ QPS and $100M+ ARR scale.
+        </p>
+        <p>
+        I enjoy mentoring engineers, driving cross-team technical initiatives, and 
+        speaking about distributed systems—recently at <a href="https://datastreaming-summit.org/">Data Streaming Summit</a>, 
+        <a href="https://www.p99conf.io/">P99 Conf</a>, and <a href="https://heapcon.io/2025">Heapcon Conf</a>.
+        </p>
+       <p>  
+        Outside work, I bake naturally leavened breads and pizzas, grow a backyard garden full of citrus, berries, passionfruit, 
+        and guavas, and spend most weekends biking and swimming with my son.
+
+        </p>
       </section>
 
       <section aria-labelledby="contact">
@@ -114,6 +149,42 @@
           <li><time datetime="2025-10-01">Oct 2025:</time><a href="#">Heapcon Conference</a></li>
         </ul>
       </section>
+
+<section aria-labelledby="talks">
+  <h2 id="talks">Conference Talks</h2>
+  <p class="muted">Events where I have spoken or will be speaking:</p>
+
+  <div class="talks-table">
+    <div class="talks-row talks-header">
+      <div>Date</div>
+      <div>Conference</div>
+      <div>Talk Title</div>
+      <div>Recording</div>
+    </div>
+
+    <div class="talks-row">
+      <div>Oct 2025</div>
+      <div><a href="https://heapcon.io/2025">Heapcon (Belgrade, Serbia)</a></div>
+      <div>Deprecating Distributed Lock using Pulsar</div>
+      <div><span class="muted">Not published yet</span></div>
+    </div>
+
+    <div class="talks-row">
+      <div>July 2025</div>
+      <div><a href="https://datastreaming-summit.org/">Data Streaming Summit</a></div>
+      <div>Deprecating Distributed Lock using Apache Pulsar</div>
+      <div><a href="https://www.youtube.com/watch?v=QwKjvtKjT98&list=PLqRma1oIkcWgGrsKZtoa7inycD4WFkH0M&index=22">🎥</a></div>
+    </div>
+
+    <div class="talks-row">
+      <div>Sept 2025</div>
+      <div><a href="https://www.p99conf.io/">P99 Conference</a></div>
+      <div>Deprecating Distributed Lock using Pulsar</div>
+      <div><a href="https://www.youtube.com/watch?v=u_qtl1n4gkE&list=PLSV-L4GsXwgkiLkn7WbK3gpw2AUqeZMCZ&index=50">🎥</a></div>
+    </div>
+  </div>
+</section>
+
     </main>
 
     <footer>
