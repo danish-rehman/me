@@ -1,238 +1,355 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Danish Rehman — Personal Site</title>
-    <meta name="description" content="A minimal, readable personal site and blog." />
-    <style>
-      :root{
-        --fg: #111;
-        --muted: #555;
-        --bg: #fff;
-        --link: #0645ad;
-        --border: #e6e6e6;
-        --maxw: 760px;
-        --rhythm: 1.1rem;
-        --arrow: #bbb;
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Danish Rehman — Personal Site</title>
+  <meta name="description" content="A minimal, readable personal site and blog." />
+  <style>
+    :root {
+      --fg: #111;
+      --muted: #555;
+      --bg: #fff;
+      --link: #0645ad;
+      --border: #e6e6e6;
+      --maxw: 760px;
+      --rhythm: 1.1rem;
+      --arrow: #bbb;
+    }
+
+    html {
+      font-size: 18px;
+    }
+
+    body {
+      margin: 0;
+      color: var(--fg);
+      background: var(--bg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Helvetica Neue", Arial, "Apple Color Emoji",
+        "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+      line-height: 1.55;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: .15em;
+    }
+
+    a:hover {
+      text-decoration-thickness: 2px;
+    }
+
+    .site-header {
+      border-bottom: 1px solid var(--border);
+      background: #fafafa;
+    }
+
+    .wrap {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: calc(var(--rhythm) * 1.2) var(--rhythm);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand h1 {
+      font-size: 2.4rem;
+      margin: 0;
+      font-weight: 400;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main section {
+      padding-block: calc(var(--rhythm) * 1.6);
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      margin: 0 0 .5rem 0;
+    }
+
+    p {
+      margin: .4rem 0 .8rem;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    hr {
+      border: 0;
+      border-top: 1px solid var(--border);
+      margin: calc(var(--rhythm) * 2) 0;
+    }
+
+    .link-list {
+      list-style: none;
+      padding: 0;
+      margin: .6rem 0;
+    }
+
+    .link-list li {
+      margin: .35rem 0;
+    }
+
+    .link-list li::before {
+      content: "→ ";
+      color: var(--arrow);
+      font-weight: 300;
+    }
+
+    .link-list time {
+      color: var(--muted);
+      margin-right: .5rem;
+      white-space: nowrap;
+    }
+
+    .portfolio-img {
+      float: right;
+      max-width: 50px;
+      margin: 0 0 1rem 1rem;
+      border-radius: 50%;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      padding: var(--rhythm);
+    }
+
+    .legal {
+      display: flex;
+      gap: .5rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .legal img {
+      height: 18px;
+      width: auto;
+      opacity: .8;
+    }
+
+    @media (max-width: 720px) {
+      .portfolio-img {
+        float: none;
+        display: block;
+        margin: 1rem auto;
       }
-      html{font-size: 18px;}
-      body{
-        margin:0; color:var(--fg); background:var(--bg);
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-                     Ubuntu, Cantarell, "Helvetica Neue", Arial, "Apple Color Emoji",
-                     "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-        line-height: 1.55;
+    }
+
+    .talks-table {
+      display: grid;
+      grid-template-columns: 110px 1fr 2fr 90px;
+      /* Date | Conf | Title | Recording */
+      column-gap: .8rem;
+      row-gap: .6rem;
+      align-items: start;
+      font-size: .9rem;
+    }
+
+    .talks-row {
+      display: contents;
+      /* <-- key fix: children become grid items */
+    }
+
+    .talks-header {
+      font-weight: 600;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .talks-header>div {
+      padding-bottom: .4rem;
+    }
+
+    .talks-row a {
+      text-decoration: underline;
+    }
+
+    .talks-row a:hover {
+      text-decoration-thickness: 2px;
+    }
+
+
+    .intro-section {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      /* vertically centers image */
+    }
+
+    .intro-text {
+      flex: 1 1 60%;
+    }
+
+    .intro-photo img {
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    }
+
+    @media (max-width: 720px) {
+      .intro-section {
+        flex-direction: column;
+        text-align: left;
       }
-      a{ color: var(--link); text-decoration: underline; text-underline-offset: .15em; }
-      a:hover{ text-decoration-thickness: 2px; }
-      .site-header{ border-bottom: 1px solid var(--border); background: #fafafa; }
-      .wrap{ max-width: var(--maxw); margin: 0 auto; padding: calc(var(--rhythm) * 1.2) var(--rhythm); }
-      .brand{ display:flex; align-items:center; justify-content:space-between; gap:1rem; }
-      .brand h1{ font-size: 2.4rem; margin:0; font-weight: 400; }
-      nav ul{ list-style:none; margin:0; padding:0; display:flex; gap:1rem; flex-wrap:wrap; }
-      nav a{ text-decoration:none; color:inherit; }
-      nav a:hover{ text-decoration: underline; }
-      main section{ padding-block: calc(var(--rhythm) * 1.6); }
-      h2{ font-size: 1.35rem; margin: 0 0 .5rem 0; }
-      p{ margin: .4rem 0 .8rem; }
-      .muted{ color: var(--muted); }
-      hr{ border:0; border-top:1px solid var(--border); margin: calc(var(--rhythm) * 2) 0; }
-      .link-list{ list-style: none; padding: 0; margin: .6rem 0; }
-      .link-list li{ margin: .35rem 0; }
-      .link-list li::before{ content:"→ "; color:var(--arrow); font-weight:300; }
-      .link-list time{ color: var(--muted); margin-right:.5rem; white-space:nowrap; }
-      .portfolio-img{
-        float:right;
-        max-width:50px;
-        margin:0 0 1rem 1rem;
-        border-radius:50%;
+
+      .intro-photo img {
+        width: 200px;
+        margin: 0 auto;
       }
-      footer{ border-top: 1px solid var(--border); color: var(--muted); padding:var(--rhythm); }
-      .legal{ display:flex; gap:.5rem; align-items:center; flex-wrap:wrap; }
-      .legal img{ height:18px; width:auto; opacity:.8; }
-      @media (max-width: 720px){
-        .portfolio-img{ float:none; display:block; margin:1rem auto; }
-      }
+    }
+  </style>
+</head>
 
-     .talks-table {
-  display: grid;
-  grid-template-columns: 110px 1fr 2fr 90px; /* Date | Conf | Title | Recording */
-  column-gap: .8rem;
-  row-gap: .6rem;
-  align-items: start;
-  font-size: .9rem;
-}
+<body>
+  <header class="site-header">
+    <div class="wrap brand">
+      <h1><a href="/">Danish Rehman</a> <img
+          src="https://cdn.prod.website-files.com/662ae63d0306bdfd5a66b3af/67f566e880a19af69dc27c37_bio-image.jpg"
+          alt="Danish Rehman portfolio photo" class="portfolio-img" />
 
-.talks-row { 
-  display: contents; /* <-- key fix: children become grid items */
-}
-
-.talks-header {
-  font-weight: 600;
-  border-bottom: 1px solid var(--border);
-}
-
-.talks-header > div {
-  padding-bottom: .4rem;
-}
-
-.talks-row a {
-  text-decoration: underline;
-}
-
-.talks-row a:hover {
-  text-decoration-thickness: 2px;
-}
-
-
-.intro-section {
-  display: flex;
-  gap: 2rem;
-  align-items: center; /* vertically centers image */
-}
-
-.intro-text {
-  flex: 1 1 60%;
-}
-
-.intro-photo img {
-  width: 300px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
-
-@media (max-width: 720px) {
-  .intro-section {
-    flex-direction: column;
-    text-align: left;
-  }
-  .intro-photo img {
-    width: 200px;
-    margin: 0 auto;
-  }
-}
-    </style>
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="wrap brand">
-        <h1><a href="/">Danish Rehman</a>        <img src="https://cdn.prod.website-files.com/662ae63d0306bdfd5a66b3af/67f566e880a19af69dc27c37_bio-image.jpg" alt="Danish Rehman portfolio photo" class="portfolio-img" />
-
-        </h1>
-        <nav aria-label="Primary">
-          <ul>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#talks">Talk</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-    <main id="content" class="wrap">
-
-<section aria-labelledby="hello" class="intro-section">
-  <div class="intro-text">
-    <h2 id="hello">Hello!</h2>
-
-    <p>
-      I'm <strong>Danish Rehman</strong>, a Staff Software Engineer at 
-      <a href="https://www.attentive.com/">Attentive</a>, where I design and scale distributed systems 
-      and lead the architecture behind our AI-powered messaging platform.
-    </p>
-
-    <p>
-      I have 15 years of experience building high-throughput, fault-tolerant systems across AdTech and SaaS, 
-      with prior roles at <a href="https://www.criteo.com/">Criteo</a>, 
-      <a href="https://www.yahoo.com/">Yahoo</a>, and <a href="https://www.aspire.io/">Aspire</a>, including multiple 0→1 platform efforts operating at 100K+ QPS and $100M+ ARR scale.
-    </p>
-
-    <p>
-      I enjoy mentoring engineers, driving cross-team technical initiatives, and speaking about distributed systems—most recently at 
-      <a href="https://datastreaming-summit.org/">Data Streaming Summit</a>,
-      <a href="https://www.p99conf.io/">P99 Conf</a>, and 
-      <a href="https://heapcon.io/2025">Heapcon Conf</a>.
-    </p>
-
-    <p>
-      Outside work, I bake naturally leavened breads and pizzas, grow a backyard garden of citrus, berries, passionfruit, and guavas, and spend weekends biking and swimming with my son.
-    </p>
-  </div>
-
-  <div class="intro-photo">
-    <img src="./assets/MITA2959.JPG"
-         alt="Danish Rehman portrait" />
-  </div>
-</section>
-
-
-
-
-
-      <section aria-labelledby="contact">
-        <h2 id="contact">About me / Contacts</h2>
-        <p class="muted">I am best described by the identity spread across the internet.</p>
-        <ul class="link-list">
-          <li><a href="Danish_Rehman_Resume.pdf">My Resume</a></li>
-          <li><a href="https://www.linkedin.com/in/danfazalr/">My LinkedIn profile</a></li>
-          <li><a href="https://github.com/danish-rehman">My projects on Github</a></li>
+      </h1>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#talks">Talk</a></li>
         </ul>
-        <p>Email: rehman dot d dot fazlur at gmail dot com.</p>
-      </section>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content" class="wrap">
+
+    <section aria-labelledby="hello" class="intro-section">
+      <div class="intro-text">
+        <h2 id="hello">Hello!</h2>
+
+        <p>
+          I'm <strong>Danish Rehman</strong>, a Staff Software Engineer at
+          <a href="https://www.attentive.com/">Attentive</a>, where I design and scale distributed systems
+          and lead the architecture behind our AI-powered messaging platform.
+        </p>
+
+        <p>
+          I have 15 years of experience building high-throughput, fault-tolerant systems across AdTech and SaaS,
+          with prior roles at <a href="https://www.criteo.com/">Criteo</a>,
+          <a href="https://www.yahoo.com/">Yahoo</a>, and <a href="https://www.aspire.io/">Aspire</a>, including
+          multiple 0→1 platform efforts operating at 100K+ QPS and $100M+ ARR scale.
+        </p>
+
+        <p>
+          I enjoy mentoring engineers, driving cross-team technical initiatives, and speaking about distributed
+          systems—most recently at
+          <a href="https://datastreaming-summit.org/">Data Streaming Summit</a>,
+          <a href="https://www.p99conf.io/">P99 Conf</a>, and
+          <a href="https://heapcon.io/2025">Heapcon Conf</a>.
+        </p>
+
+        <p>
+          Outside work, I bake naturally leavened breads and pizzas, grow a backyard garden of citrus, berries,
+          passionfruit, and guavas, and spend weekends biking and swimming with my son.
+        </p>
+      </div>
+
+      <div class="intro-photo">
+        <img src="./assets/MITA2959.JPG" alt="Danish Rehman portrait" />
+      </div>
+    </section>
+
+    <section aria-labelledby="contact">
+      <h2 id="contact">About me / Contacts</h2>
+      <p class="muted">I am best described by the identity spread across the internet.</p>
+      <ul class="link-list">
+        <li><a href="Danish_Rehman_Resume.pdf">My Resume</a></li>
+        <li><a href="https://www.linkedin.com/in/danfazalr/">My LinkedIn profile</a></li>
+        <li><a href="https://github.com/danish-rehman">My projects on Github</a></li>
+      </ul>
+      <p>Email: rehman dot d dot fazlur at gmail dot com.</p>
+    </section>
 
     <section aria-labelledby="blog">
-        <h2 id="blog">Recent Blog Posts</h2>
-        <p class="muted">Things I have written recently.:</p>
-        <ul class="link-list">
-          <li><time datetime="2025-11-06">April 2025:</time>
-            <a href="https://tech.attentive.com/articles/goodbye-distributed-locks">Goodbye Distributed Locks: Message Orchestration at Scale with Apache Pulsar</a>
-          </li>
-        </ul>
-      </section>
+      <h2 id="blog">Recent Blog Posts</h2>
+      <p class="muted">Things I have written recently.:</p>
+      <ul class="link-list">
+        <li><time datetime="2025-11-06">April 2025:</time>
+          <a href="https://tech.attentive.com/articles/goodbye-distributed-locks">Goodbye Distributed Locks: Message
+            Orchestration at Scale with Apache Pulsar</a>
+        </li>
+      </ul>
+    </section>
 
-<section aria-labelledby="talks">
-  <h2 id="talks">Conference Talks</h2>
-  <p class="muted">Events where I have spoken or will be speaking:</p>
+    <section aria-labelledby="talks">
+      <h2 id="talks">Conference Talks</h2>
+      <p class="muted">Events where I have spoken or will be speaking:</p>
 
-  <div class="talks-table">
-    <div class="talks-row talks-header">
-      <div>Conference</div>
-      <div>Talk Title</div>
-      <div>Recording</div>
-      <div>Date</div>
-    </div>
+      <div class="talks-table">
+        <div class="talks-row talks-header">
+          <div>Conference</div>
+          <div>Talk Title</div>
+          <div>Recording</div>
+        </div>
 
-    <div class="talks-row">
+        <div class="talks-row">
 
-      <div><a href="https://heapcon.io/2025">Heapcon (Belgrade, Serbia)</a></div>
-      <div>Deprecating Distributed Lock using Pulsar</div>
-      <div><span class="muted">Not published yet</span></div>
-      <div>Oct 2025</div>
-    </div>
+          <div><a href="https://heapcon.io/2025">Heapcon (Belgrade, Serbia) - 2025</a></div>
+          <div>Deprecating Distributed Lock using Pulsar</div>
+          <div><span class="muted">Not published yet</span></div>
+        </div>
 
-    <div class="talks-row">
-      <div><a href="https://datastreaming-summit.org/">Data Streaming Summit</a></div>
-      <div>Deprecating Distributed Lock using Apache Pulsar</div>
-      <div><a href="https://www.youtube.com/watch?v=QwKjvtKjT98&list=PLqRma1oIkcWgGrsKZtoa7inycD4WFkH0M&index=22">🎥</a></div>
-      <div>July 2025</div>
-    </div>
+        <div class="talks-row">
+          <div><a href="https://datastreaming-summit.org/">Data Streaming Summit - 2025</a></div>
+          <div>Deprecating Distributed Lock using Apache Pulsar</div>
+          <div><a
+              href="https://www.youtube.com/watch?v=QwKjvtKjT98&list=PLqRma1oIkcWgGrsKZtoa7inycD4WFkH0M&index=22">🎥</a>
+          </div>
+        </div>
 
-    <div class="talks-row">
-      <div><a href="https://www.p99conf.io/">P99 Conference</a></div>
-      <div>Deprecating Distributed Lock using Pulsar</div>
-      <div><a href="https://www.youtube.com/watch?v=u_qtl1n4gkE&list=PLSV-L4GsXwgkiLkn7WbK3gpw2AUqeZMCZ&index=50">🎥</a></div>
-      <div>Sept 2025</div>
-    </div>
-  </div>
-</section>
-
-    </main>
-
-    <footer>
-      <div class="wrap legal">
-        <img alt="Creative Commons" src="https://licensebuttons.net/l/by/3.0/88x31.png" />
-        <small>Unless otherwise specified, all content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.</small>
+        <div class="talks-row">
+          <div><a href="https://www.p99conf.io/">P99 Conference - 2025</a></div>
+          <div>Deprecating Distributed Lock using Pulsar</div>
+          <div><a
+              href="https://www.youtube.com/watch?v=u_qtl1n4gkE&list=PLSV-L4GsXwgkiLkn7WbK3gpw2AUqeZMCZ&index=50">🎥</a>
+          </div>
+        </div>
       </div>
-    </footer>
-  </body>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap legal">
+      <img alt="Creative Commons" src="https://licensebuttons.net/l/by/3.0/88x31.png" />
+      <small>Unless otherwise specified, all content on this site is licensed under a <a
+          href="https://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported
+          License</a>.</small>
+    </div>
+  </footer>
+</body>
+
 </html>
