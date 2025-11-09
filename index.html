@@ -55,21 +55,26 @@
         .portfolio-img{ float:none; display:block; margin:1rem auto; }
       }
 
-      .talks-table {
+     .talks-table {
   display: grid;
-  grid-template-columns: 110px 1fr 2fr 90px;
+  grid-template-columns: 110px 1fr 2fr 90px; /* Date | Conf | Title | Recording */
+  column-gap: .8rem;
   row-gap: .6rem;
+  align-items: start;
   font-size: .9rem;
+}
+
+.talks-row { 
+  display: contents; /* <-- key fix: children become grid items */
 }
 
 .talks-header {
   font-weight: 600;
   border-bottom: 1px solid var(--border);
-  padding-bottom: .4rem;
 }
 
-.talks-row div {
-  padding-right: .8rem;
+.talks-header > div {
+  padding-bottom: .4rem;
 }
 
 .talks-row a {
