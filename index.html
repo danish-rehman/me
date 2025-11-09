@@ -84,6 +84,35 @@
 .talks-row a:hover {
   text-decoration-thickness: 2px;
 }
+
+
+.intro-section {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.intro-text {
+  flex: 1 1 60%;
+}
+
+.intro-photo img {
+  width: 180px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+@media (max-width: 720px) {
+  .intro-section {
+    flex-direction: column;
+    text-align: left;
+  }
+  .intro-photo img {
+    width: 200px;
+    margin: 0 auto;
+  }
+}
+
     </style>
   </head>
   <body>
@@ -104,10 +133,11 @@
     <main id="content" class="wrap">
       <section aria-labelledby="hello">
         <h2 id="hello">Hello!</h2>
-        <p>I'm <strong>Danish Rehman</strong>. Briefly about myself:</p>
         <p>
-          I'm Danish Rehman, a Staff Software Engineer at <a href="https://www.attentive.com/">Attentive</a>, where I design and scale distributed systems and 
+          I'm <strong>Danish Rehman</strong>, a Staff Software Engineer at <a href="https://www.attentive.com/">Attentive</a>, where I design and scale distributed systems and 
           lead the architecture behind our AI-powered messaging platform. 
+        </p>
+        <p>
           I have 15 years of experience building high-throughput, fault-tolerant systems across AdTech and SaaS, 
           with prior roles at <a href="https://www.criteo.com/">Criteo</a>, <a href="https://www.yahoo.com/">Yahoo</a>, and <a href="https://www.aspire.io/">Aspire</a>, including multiple 0→1 product journeys and platforms operating 
           at 100K+ QPS and $100M+ ARR scale.
@@ -123,6 +153,41 @@
 
         </p>
       </section>
+
+<section aria-labelledby="hello" class="intro-section">
+  <div class="intro-text">
+    <h2 id="hello">Hello!</h2>
+
+    <p>
+      I'm <strong>Danish Rehman</strong>, a Staff Software Engineer at 
+      <a href="https://www.attentive.com/">Attentive</a>, where I design and scale distributed systems 
+      and lead the architecture behind our AI-powered messaging platform.
+    </p>
+
+    <p>
+      I have 15 years of experience building high-throughput, fault-tolerant systems across AdTech and SaaS, 
+      with prior roles at <a href="https://www.criteo.com/">Criteo</a>, 
+      <a href="https://www.yahoo.com/">Yahoo</a>, and <a href="https://www.aspire.io/">Aspire</a>, including multiple 0→1 platform efforts operating at 100K+ QPS and $100M+ ARR scale.
+    </p>
+
+    <p>
+      I enjoy mentoring engineers, driving cross-team technical initiatives, and speaking about distributed systems—most recently at 
+      <a href="https://datastreaming-summit.org/">Data Streaming Summit</a>,
+      <a href="https://www.p99conf.io/">P99 Conf</a>, and 
+      <a href="https://heapcon.io/2025">Heapcon Conf</a>.
+    </p>
+
+    <p>
+      Outside work, I bake naturally leavened breads and pizzas, grow a backyard garden of citrus, berries, passionfruit, and guavas, and spend weekends biking and swimming with my son.
+    </p>
+  </div>
+
+  <div class="intro-photo">
+    <img src="./assets/MITA2959.JPG"
+         alt="Danish Rehman portrait" />
+  </div>
+</section>
+
 
       <section aria-labelledby="contact">
         <h2 id="contact">About me / Contacts</h2>
@@ -145,47 +210,38 @@
         </ul>
       </section>
 
-      <section aria-labelledby="talks">
-        <h2 id="talks">Conference talks</h2>
-        <p class="muted">Events where I will be speaking or have spoken:</p>
-        <ul class="link-list">
-          <li><time datetime="2025-07-01">July 2025:</time><a href="#">Data Streaming Summit</a></li>
-          <li><time datetime="2025-09-01">Sept 2025:</time><a href="#">P99 Conference</a></li>
-          <li><time datetime="2025-10-01">Oct 2025:</time><a href="#">Heapcon Conference</a></li>
-        </ul>
-      </section>
-
 <section aria-labelledby="talks">
   <h2 id="talks">Conference Talks</h2>
   <p class="muted">Events where I have spoken or will be speaking:</p>
 
   <div class="talks-table">
     <div class="talks-row talks-header">
-      <div>Date</div>
       <div>Conference</div>
       <div>Talk Title</div>
       <div>Recording</div>
+      <div>Date</div>
     </div>
 
     <div class="talks-row">
-      <div>Oct 2025</div>
+
       <div><a href="https://heapcon.io/2025">Heapcon (Belgrade, Serbia)</a></div>
       <div>Deprecating Distributed Lock using Pulsar</div>
       <div><span class="muted">Not published yet</span></div>
+      <div>Oct 2025</div>
     </div>
 
     <div class="talks-row">
-      <div>July 2025</div>
       <div><a href="https://datastreaming-summit.org/">Data Streaming Summit</a></div>
       <div>Deprecating Distributed Lock using Apache Pulsar</div>
       <div><a href="https://www.youtube.com/watch?v=QwKjvtKjT98&list=PLqRma1oIkcWgGrsKZtoa7inycD4WFkH0M&index=22">🎥</a></div>
+      <div>July 2025</div>
     </div>
 
     <div class="talks-row">
-      <div>Sept 2025</div>
       <div><a href="https://www.p99conf.io/">P99 Conference</a></div>
       <div>Deprecating Distributed Lock using Pulsar</div>
       <div><a href="https://www.youtube.com/watch?v=u_qtl1n4gkE&list=PLSV-L4GsXwgkiLkn7WbK3gpw2AUqeZMCZ&index=50">🎥</a></div>
+      <div>Sept 2025</div>
     </div>
   </div>
 </section>
